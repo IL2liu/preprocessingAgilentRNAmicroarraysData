@@ -1,4 +1,4 @@
-ThreeBackgroundCorrection <- function(EList, offset=18){
+threeBackgroundCorrection <- function(EList, offset=18){
 	l1 <- getListOfBGCorrByMultipleMethods(data=EList, methods=meth)
 	l2 <- getListOfBGCorrByMultipleMethods(data=EList, methods="normexp", offset=eval(18))
 	l3 <- append(l1,l2)
