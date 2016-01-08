@@ -8,8 +8,8 @@ threeBackgroundCorrection <- function(EList, offset=18){
 	
 	#plotting the density curve for the three correction (x/y axis range = -40,150)
 	
-	df1 <- getMeanOfBGCorrByMultipleMethods(LC.limma, methods=meth)
-	df2 <- getMeanOfBGCorrByMultipleMethods(LC.limma, methods="normexp", offset=18)
+	df1 <- getMeanOfBGCorrByMultipleMethods(EList, methods=meth)
+	df2 <- getMeanOfBGCorrByMultipleMethods(EList, methods="normexp", offset=18)
 	df3 <- rbind(df1,df2)
 	p <- ggplot(df3, aes(x=values, colour=as.factor(methods)))+geom_line(stat="density")+xlim(c(-40, 150))+theme_minimal()+scale_colour_discrete(name="Methods")
 	print (p)
