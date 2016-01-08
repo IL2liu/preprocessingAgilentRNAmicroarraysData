@@ -7,5 +7,6 @@ threeBackgroundCorrection <- function(EList, offset=18){
 	cat("Creating the density curve for the three correction (x/y axis range = -40,150)\n")
 	
 	plotDensityCurveForMultipleBGCorr(l3)
+	
+	return(l3)
 }
-
