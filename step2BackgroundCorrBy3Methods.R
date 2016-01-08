@@ -1,4 +1,3 @@
-#
 threeBackgroundCorrection <- function(EList, offset=18){
 	meth <- c("none", "normexp")
 	l1 <- getListOfBGCorrByMultipleMethods(data=EList, methods=meth)
@@ -9,3 +8,4 @@ threeBackgroundCorrection <- function(EList, offset=18){
 	
 	plotDensityCurveForMultipleBGCorr(l3)
 }
+

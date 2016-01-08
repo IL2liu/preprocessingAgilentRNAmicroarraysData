@@ -29,9 +29,9 @@ sdrf.dir <- "/Users/sebmella/Documents/analyses_transriptome/B_GIROS"
 #reading extraction feature files corresponding to LC REgion with limma
 
 	setwd(featureExtractionFiles.dir)
-	LC.limma <- read.maimages(SDRFbGiros[SDRFbGiros["Regions"]=="LC","featureExtractionFiles"], source='agilent', green.only=T)
+	LC.limma <- read.maimages(SDRF[SDRF["Regions"]=="LC","featureExtractionFiles"], source='agilent', green.only=T)
 
 	#adding Genotype info in $targets
 	for(i in 1:nrow(LC.limma$targets)){
-		LC.limma$targets$Genotype[i] <- SDRFbGiros[SDRFbGiros$featureExtractionFiles == LC.limma$targets$FileName[i],]$Genotype
+		LC.limma$targets$Genotype[i] <- SDRF[SDRF$featureExtractionFiles == LC.limma$targets$FileName[i],]$Genotype
 	}
